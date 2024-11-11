@@ -14,6 +14,7 @@ class SimFormPage extends StatefulWidget {
 
 class _SimFormPageState extends State<SimFormPage> {
   bool useKTP = true;
+  bool useReminder = false;
 
   TextEditingController nikController = TextEditingController();
   TextEditingController nameController = TextEditingController();
@@ -44,6 +45,12 @@ class _SimFormPageState extends State<SimFormPage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    setKTPData(useKTP);
+  }
+
+  @override
   void dispose() {
     nikController.dispose();
     nameController.dispose();
@@ -57,8 +64,9 @@ class _SimFormPageState extends State<SimFormPage> {
   Widget build(BuildContext context) {
     return SuratScaffold(
       useDrawer: false,
+      useNavigationBar: false,
       title: "SIM",
-      body: ListView(
+      body: Column(
         children: [
           Container(
             margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -185,12 +193,70 @@ class _SimFormPageState extends State<SimFormPage> {
                         hintText: "Alamat",
                         enabled: !useKTP,
                       ),
-                      SizedBox(height: 15)
                     ],
                   ),
-                )
+                ),
+                SizedBox(height: 15),
+                Text(
+                  "Lokasi Pengambilan",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 5),
+                SuratDropdownField(
+                  value: null,
+                  hintText: "Pilih Lokasi",
+                  enabled: true,
+                  items: [
+                    DropdownMenuItem(
+                      value: "1",
+                      child: Text("Kantor Polisi"),
+                    ),
+                    DropdownMenuItem(
+                      value: "2",
+                      child: Text("Kantor Samsat"),
+                    ),
+                  ],
+                  onChanged: (value) {},
+                ),
               ],
             ),
+          ),
+          SizedBox(height: 75),
+          Row(
+            children: [
+              Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text("Ajukan"),
+                ),
+              ),
+              Container(
+                width: 24,
+                height: 24,
+                margin: EdgeInsets.fromLTRB(0, 5, 5, 5),
+                child: Checkbox(
+                  value: useReminder,
+                  onChanged: (value) {
+                    setState(() {
+                      useReminder = value!;
+                    });
+                  },
+                ),
+              ),
+              Text(
+                "Tambahkan ke Reminder",
+                style: TextStyle(
+                  fontFamily: "Rubik",
+                  fontSize: 14,
+                ),
+              ),
+            ],
           ),
         ],
       ),

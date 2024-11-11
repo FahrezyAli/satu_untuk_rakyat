@@ -27,8 +27,8 @@ class _SuratNavigationBarState extends State<SuratNavigationBar> {
           label: "Beranda",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.history),
-          label: "Histori",
+          icon: Icon(Icons.add),
+          label: "Tambah Dokumen",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),

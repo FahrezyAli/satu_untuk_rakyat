@@ -4,15 +4,22 @@ import 'package:satu_untuk_rakyat/components/navigation_bar.dart';
 
 class SuratScaffold extends StatelessWidget {
   final String? title;
-  final bool? useDrawer;
+  final bool useDrawer;
+  final bool useNavigationBar;
   final Widget? body;
 
-  const SuratScaffold({super.key, this.title, this.useDrawer, this.body});
+  const SuratScaffold({
+    super.key,
+    this.title,
+    this.useDrawer = true,
+    this.useNavigationBar = true,
+    this.body,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: useDrawer ?? true ? SuratDrawer() : null,
+      drawer: useDrawer ? SuratDrawer() : null,
       appBar: AppBar(
         title: Text(title ?? "Surat"),
         actions: [
@@ -38,7 +45,7 @@ class SuratScaffold extends StatelessWidget {
           SizedBox(width: 20),
         ],
       ),
-      bottomNavigationBar: SuratNavigationBar(),
+      bottomNavigationBar: useNavigationBar ? SuratNavigationBar() : null,
       body: body,
     );
   }
