@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:satu_untuk_rakyat/src/general/landing_page.dart';
 import 'package:satu_untuk_rakyat/src/general/start_page.dart';
+import 'package:satu_untuk_rakyat/src/sim/sim_form_page.dart';
 import 'package:satu_untuk_rakyat/utils/colors.dart';
 
 /// The Widget that configures your application.
@@ -63,6 +64,16 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.white),
         ),
         iconTheme: IconThemeData(color: suratBlue),
+        inputDecorationTheme: InputDecorationTheme(
+          hintStyle: TextStyle(
+            color: Colors.grey,
+            fontFamily: "Rubik",
+            fontSize: 14,
+          ),
+          border: InputBorder.none,
+          contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          isDense: true,
+        ),
       ),
 
       // Define a function to handle named routes in order to support
@@ -76,6 +87,8 @@ class MyApp extends StatelessWidget {
                 return const StartPage();
               case '/landing':
                 return const LandingPage();
+              case '/sim-extension-form':
+                return const SimFormPage();
               default:
                 return Scaffold(
                   body: Center(

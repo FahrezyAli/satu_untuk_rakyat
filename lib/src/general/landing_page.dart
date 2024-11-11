@@ -41,9 +41,45 @@ class LandingPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ServiceIcon(
-                  service: "SIM",
-                  icon: "sim",
-                ),
+                    service: "SIM",
+                    icon: "sim",
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Wrap(
+                            children: [
+                              Container(
+                                width: double.infinity,
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text("Buat Baru"),
+                                ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                padding: EdgeInsets.only(bottom: 10),
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                    Navigator.pushNamed(
+                                      context,
+                                      '/sim-extension-form',
+                                    );
+                                  },
+                                  child: Text("Perpanjang"),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }),
                 ServiceIcon(
                   service: "Paspor",
                   icon: "pasport",

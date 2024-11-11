@@ -4,8 +4,14 @@ import 'package:satu_untuk_rakyat/utils/colors.dart';
 class ServiceIcon extends StatelessWidget {
   final String service;
   final String icon;
+  final VoidCallback? onPressed;
 
-  const ServiceIcon({super.key, required this.service, required this.icon});
+  const ServiceIcon({
+    super.key,
+    required this.service,
+    required this.icon,
+    this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +24,12 @@ class ServiceIcon extends StatelessWidget {
             backgroundColor: suratGray,
             foregroundColor: Colors.blue,
           ),
+          onPressed: onPressed,
           child: Ink.image(
             image: AssetImage("assets/icons/$icon.png"),
             width: 30,
             height: 30,
           ),
-          onPressed: () {
-            return;
-          },
         ),
         SizedBox(height: 5),
         Text(service),
