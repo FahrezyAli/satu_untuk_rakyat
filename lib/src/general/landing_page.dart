@@ -22,6 +22,7 @@ class LandingPage extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
+            SizedBox(height: 5),
             ...reminderData.map((reminder) {
               return ReminderCard(reminder: reminder);
             }),
@@ -33,11 +34,47 @@ class LandingPage extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ServiceIcon(
                   service: "SIM",
+                  icon: "sim",
+                ),
+                ServiceIcon(
+                  service: "Paspor",
+                  icon: "pasport",
+                ),
+                ServiceIcon(
+                  service: "Surat Sehat",
+                  icon: "health",
+                ),
+                ServiceIcon(
+                  service: "Histori",
+                  icon: "history",
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ServiceIcon(
+                  service: "KTP",
+                  icon: "ktp",
+                ),
+                ServiceIcon(
+                  service: "KK",
+                  icon: "kk",
+                ),
+                ServiceIcon(
+                  service: "Akta",
+                  icon: "akta",
+                ),
+                ServiceIcon(
+                  service: "Lainnya",
+                  icon: "other",
                 ),
               ],
             ),

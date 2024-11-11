@@ -24,10 +24,11 @@ class SuratScaffold extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Colors.transparent,
             backgroundImage: const AssetImage(
-              'assets/images/user_placeholder.png',
+              'assets/images/user.png',
             ),
             child: InkWell(
               borderRadius: BorderRadius.circular(50),
+              splashColor: Colors.blue,
               onTap: () {
                 return;
               },

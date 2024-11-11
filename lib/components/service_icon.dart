@@ -3,29 +3,31 @@ import 'package:satu_untuk_rakyat/utils/colors.dart';
 
 class ServiceIcon extends StatelessWidget {
   final String service;
+  final String icon;
 
-  const ServiceIcon({super.key, required this.service});
+  const ServiceIcon({super.key, required this.service, required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        InkWell(
-          borderRadius: BorderRadius.circular(50),
-          child: Ink(
-            decoration: BoxDecoration(
-              color: suratGray,
-              borderRadius: BorderRadius.circular(50),
-            ),
-            width: 50,
-            height: 50,
-            child: Image.asset("assets/images/${service.toLowerCase()}.png"),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(10),
+            backgroundColor: suratGray,
+            foregroundColor: Colors.blue,
           ),
-          onTap: () {
+          child: Ink.image(
+            image: AssetImage("assets/icons/$icon.png"),
+            width: 30,
+            height: 30,
+          ),
+          onPressed: () {
             return;
           },
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 5),
         Text(service),
       ],
     );

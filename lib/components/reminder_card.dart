@@ -27,7 +27,7 @@ class ReminderCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Image.asset(
-              'assets/images/sim.png',
+              'assets/icons/${reminder.icon}.png',
               scale: 2,
             ),
           ),
