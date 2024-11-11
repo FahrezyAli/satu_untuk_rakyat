@@ -32,7 +32,13 @@ class StartPage extends StatelessWidget {
             child: SizedBox(
               width: deviceWidth - 100,
               child: const Center(
-                child: Text('Login'),
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
             ),
           ),
@@ -52,7 +58,13 @@ class StartPage extends StatelessWidget {
             child: SizedBox(
               width: deviceWidth - 100,
               child: const Center(
-                child: Text('Register'),
+                child: Text(
+                  'Register',
+                  style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ),
             ),
           ),
@@ -60,10 +72,13 @@ class StartPage extends StatelessWidget {
           RichText(
             text: TextSpan(
               text: AppLocalizations.of(context)!.skip,
-              style: const TextStyle(color: suratBlue),
+              style: const TextStyle(
+                color: suratBlue,
+                fontFamily: "Roboto",
+              ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  return;
+                  Navigator.pushReplacementNamed(context, "/landing");
                 },
             ),
           ),
