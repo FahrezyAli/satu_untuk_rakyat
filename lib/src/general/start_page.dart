@@ -8,18 +8,16 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var deviceWidth = MediaQuery.sizeOf(context).width;
-
     return Scaffold(
       body: Column(
         children: [
           const Center(),
-          SizedBox(height: deviceWidth / 5),
-          Image(
-            image: const AssetImage('assets/images/logo.png'),
-            width: deviceWidth - 100,
+          SizedBox(height: 75),
+          Image.asset(
+            'assets/images/logo.png',
+            width: 250,
           ),
-          SizedBox(height: deviceWidth - 150),
+          SizedBox(height: 250),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
@@ -30,7 +28,7 @@ class StartPage extends StatelessWidget {
               return;
             },
             child: SizedBox(
-              width: deviceWidth - 100,
+              width: 250,
               child: const Center(
                 child: Text(
                   'Login',
@@ -56,7 +54,7 @@ class StartPage extends StatelessWidget {
               return;
             },
             child: SizedBox(
-              width: deviceWidth - 100,
+              width: 250,
               child: const Center(
                 child: Text(
                   'Register',
