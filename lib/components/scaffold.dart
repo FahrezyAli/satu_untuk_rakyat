@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:satu_untuk_rakyat/components/drawer.dart';
+import 'package:satu_untuk_rakyat/components/navigation_bar.dart';
 
 class SuratScaffold extends StatelessWidget {
   final Widget? body;
@@ -37,6 +38,7 @@ class SuratScaffold extends StatelessWidget {
           SizedBox(width: 20),
         ],
       ),
+      bottomNavigationBar: SuratNavigationBar(),
       body: body,
     );
   }
