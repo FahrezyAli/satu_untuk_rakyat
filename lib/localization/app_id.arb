@@ -1,0 +1,7 @@
+{
+  "@@locale": "id",
+  "skip": "Lewati",
+  "@skip": {
+    "description": "Skip button text"
+  }
+}

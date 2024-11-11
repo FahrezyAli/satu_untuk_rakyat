@@ -1,0 +1,7 @@
+{
+  "@@locale": "en",
+  "skip": "Skip",
+  "@skip": {
+    "description": "Skip button text"
+  }
+}
