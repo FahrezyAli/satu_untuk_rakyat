@@ -6,11 +6,13 @@ List<Services> servicesData = [
     title: "Perpanjangan SIM Anda",
     date: DateTime(2024, 10, 14, 8),
     status: "Pending",
+    icon: "sim",
   ),
   Services(
     type: "Health",
     title: "Pembuatan Surat Sehat",
     date: DateTime(2024, 10, 14, 8),
     status: "Success",
+    icon: "health",
   ),
 ];
