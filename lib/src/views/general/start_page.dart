@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class StartPage extends StatelessWidget {

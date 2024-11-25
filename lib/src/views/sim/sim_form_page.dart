@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:satu_untuk_rakyat/components/dropdown_field.dart';
-import 'package:satu_untuk_rakyat/components/scaffold.dart';
-import 'package:satu_untuk_rakyat/components/text_field.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/components/dropdown_field.dart';
+import 'package:satu_untuk_rakyat/src/components/scaffold.dart';
+import 'package:satu_untuk_rakyat/src/components/text_field.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 
 class SimFormPage extends StatefulWidget {
   const SimFormPage({super.key});

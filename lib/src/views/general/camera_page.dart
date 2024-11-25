@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/components/scaffold.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/components/scaffold.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 
 class CameraPage extends StatelessWidget {
   const CameraPage({super.key});

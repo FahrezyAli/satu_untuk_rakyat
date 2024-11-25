@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 
 class ServiceIcon extends StatelessWidget {
   final String service;

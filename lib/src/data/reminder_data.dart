@@ -1,4 +1,4 @@
-import 'package:satu_untuk_rakyat/models/reminder_model.dart';
+import 'package:satu_untuk_rakyat/src/models/reminder_model.dart';
 
 List<Reminder> reminderData = [
   Reminder(

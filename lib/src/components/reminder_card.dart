@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/models/reminder_model.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/models/reminder_model.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 import 'package:intl/intl.dart';
 
 class ReminderCard extends StatelessWidget {

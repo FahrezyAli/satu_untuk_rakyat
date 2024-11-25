@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/components/scaffold.dart';
-import 'package:satu_untuk_rakyat/components/status_card.dart';
-import 'package:satu_untuk_rakyat/data/sevices_data.dart';
+import 'package:satu_untuk_rakyat/src/components/scaffold.dart';
+import 'package:satu_untuk_rakyat/src/components/status_card.dart';
+import 'package:satu_untuk_rakyat/src/data/sevices_data.dart';
 
 class StatusPage extends StatelessWidget {
   const StatusPage({super.key});

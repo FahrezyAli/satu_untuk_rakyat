@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/components/reminder_card.dart';
-import 'package:satu_untuk_rakyat/components/scaffold.dart';
-import 'package:satu_untuk_rakyat/components/service_icon.dart';
-import 'package:satu_untuk_rakyat/components/status_viewport.dart';
-import 'package:satu_untuk_rakyat/data/reminder_data.dart';
-import 'package:satu_untuk_rakyat/data/sevices_data.dart';
+import 'package:satu_untuk_rakyat/src/components/reminder_card.dart';
+import 'package:satu_untuk_rakyat/src/components/scaffold.dart';
+import 'package:satu_untuk_rakyat/src/components/service_icon.dart';
+import 'package:satu_untuk_rakyat/src/components/status_viewport.dart';
+import 'package:satu_untuk_rakyat/src/data/reminder_data.dart';
+import 'package:satu_untuk_rakyat/src/data/sevices_data.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});

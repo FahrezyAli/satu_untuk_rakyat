@@ -1,4 +1,4 @@
-import 'package:satu_untuk_rakyat/models/services_model.dart';
+import 'package:satu_untuk_rakyat/src/models/services_model.dart';
 
 List<Services> servicesData = [
   Services(

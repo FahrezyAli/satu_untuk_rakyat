@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:satu_untuk_rakyat/src/general/camera_page.dart';
-import 'package:satu_untuk_rakyat/src/general/landing_page.dart';
-import 'package:satu_untuk_rakyat/src/general/start_page.dart';
-import 'package:satu_untuk_rakyat/src/general/status_page.dart';
-import 'package:satu_untuk_rakyat/src/health/health_form_page.dart';
-import 'package:satu_untuk_rakyat/src/sim/sim_form_page.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/views/general/camera_page.dart';
+import 'package:satu_untuk_rakyat/src/views/general/landing_page.dart';
+import 'package:satu_untuk_rakyat/src/views/general/start_page.dart';
+import 'package:satu_untuk_rakyat/src/views/general/status_page.dart';
+import 'package:satu_untuk_rakyat/src/views/health/health_form_page.dart';
+import 'package:satu_untuk_rakyat/src/views/sim/sim_form_page.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 
 /// The Widget that configures your application.
-class MyApp extends StatelessWidget {
-  const MyApp({
+class SuratApp extends StatelessWidget {
+  const SuratApp({
     super.key,
   });
 

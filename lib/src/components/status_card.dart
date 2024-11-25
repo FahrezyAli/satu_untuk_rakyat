@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:satu_untuk_rakyat/models/services_model.dart';
-import 'package:satu_untuk_rakyat/utils/colors.dart';
+import 'package:satu_untuk_rakyat/src/models/services_model.dart';
+import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 import 'package:intl/intl.dart';
 
 class StatusCard extends StatelessWidget {
