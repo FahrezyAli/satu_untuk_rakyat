@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:satu_untuk_rakyat/src/components/dropdown_field.dart';
 import 'package:satu_untuk_rakyat/src/components/scaffold.dart';
+import 'package:satu_untuk_rakyat/src/components/schedule_picker.dart';
 import 'package:satu_untuk_rakyat/src/components/text_field.dart';
 import 'package:satu_untuk_rakyat/src/components/upload_button.dart';
 import 'package:satu_untuk_rakyat/src/utils/colors.dart';
@@ -70,8 +71,8 @@ class _HealthFormPageState extends State<HealthFormPage> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: suratBlue,
               borderRadius: BorderRadius.circular(10),
@@ -208,9 +209,7 @@ class _HealthFormPageState extends State<HealthFormPage> {
                 ),
                 SizedBox(height: 5),
                 SuratDropdownField(
-                  value: null,
                   hintText: "Pilih Lokasi",
-                  enabled: true,
                   items: [
                     DropdownMenuItem(
                       value: "1",
@@ -238,6 +237,10 @@ class _HealthFormPageState extends State<HealthFormPage> {
               ),
             ),
           ),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: SchedulePicker(),
+          ),
           Container(
             padding: EdgeInsets.only(left: 20),
             alignment: Alignment.topLeft,
@@ -264,7 +267,7 @@ class _HealthFormPageState extends State<HealthFormPage> {
             children: [
               Container(
                 alignment: Alignment.centerLeft,
-                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                margin: EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/status');
