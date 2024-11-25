@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:satu_untuk_rakyat/src/general/camera_page.dart';
 import 'package:satu_untuk_rakyat/src/general/landing_page.dart';
 import 'package:satu_untuk_rakyat/src/general/start_page.dart';
+import 'package:satu_untuk_rakyat/src/general/status_page.dart';
+import 'package:satu_untuk_rakyat/src/health/health_form_page.dart';
 import 'package:satu_untuk_rakyat/src/sim/sim_form_page.dart';
 import 'package:satu_untuk_rakyat/utils/colors.dart';
 
@@ -87,8 +90,14 @@ class MyApp extends StatelessWidget {
                 return const StartPage();
               case '/landing':
                 return const LandingPage();
+              case '/camera':
+                return const CameraPage();
               case '/sim-extension-form':
                 return const SimFormPage();
+              case '/health-form':
+                return const HealthFormPage();
+              case '/status':
+                return const StatusPage();
               default:
                 return Scaffold(
                   body: Center(
