@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:satu_untuk_rakyat/components/reminder_card.dart';
 import 'package:satu_untuk_rakyat/components/scaffold.dart';
 import 'package:satu_untuk_rakyat/components/service_icon.dart';
-import 'package:satu_untuk_rakyat/components/status_card.dart';
+import 'package:satu_untuk_rakyat/components/status_viewport.dart';
 import 'package:satu_untuk_rakyat/data/reminder_data.dart';
 import 'package:satu_untuk_rakyat/data/sevices_data.dart';
 
@@ -85,12 +85,51 @@ class LandingPage extends StatelessWidget {
                   icon: "pasport",
                 ),
                 ServiceIcon(
-                  service: "Surat Sehat",
-                  icon: "health",
-                ),
+                    service: "Surat Sehat",
+                    icon: "health",
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Wrap(
+                            children: [
+                              Container(
+                                width: double.infinity,
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                    Navigator.pushNamed(
+                                      context,
+                                      '/health-form',
+                                    );
+                                  },
+                                  child: Text("Buat Baru"),
+                                ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                padding: EdgeInsets.only(bottom: 10),
+                                margin: EdgeInsets.symmetric(horizontal: 10),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text("Histori"),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }),
                 ServiceIcon(
                   service: "Histori",
                   icon: "history",
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/status');
+                  },
                 ),
               ],
             ),
@@ -125,7 +164,7 @@ class LandingPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 5),
-            StatusCard(services: servicesData),
+            StatusViewport(services: servicesData),
           ],
         ),
       ),
