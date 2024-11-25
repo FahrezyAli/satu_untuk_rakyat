@@ -15,7 +15,7 @@ class UploadButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: (enabled ?? false) ? onPressed : null,
+      onPressed: (enabled ?? true) ? onPressed : null,
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,

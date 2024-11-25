@@ -9,6 +9,7 @@ class StatusPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SuratScaffold(
+      title: "Status",
       useDrawer: false,
       useNavigationBar: false,
       body: Column(

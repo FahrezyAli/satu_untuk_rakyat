@@ -74,7 +74,7 @@ class SuratApp extends StatelessWidget {
             fontSize: 14,
           ),
           border: InputBorder.none,
-          contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          contentPadding: EdgeInsets.all(10),
           isDense: true,
         ),
       ),

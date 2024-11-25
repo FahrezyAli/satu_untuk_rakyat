@@ -8,6 +8,7 @@ class CameraPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SuratScaffold(
+      title: "Kamera",
       useDrawer: false,
       useNavigationBar: false,
       body: Column(

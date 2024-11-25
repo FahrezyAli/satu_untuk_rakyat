@@ -69,8 +69,8 @@ class _SimFormPageState extends State<SimFormPage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: suratBlue,
               borderRadius: BorderRadius.circular(10),
@@ -207,9 +207,7 @@ class _SimFormPageState extends State<SimFormPage> {
                 ),
                 SizedBox(height: 5),
                 SuratDropdownField(
-                  value: null,
                   hintText: "Pilih Lokasi",
-                  enabled: true,
                   items: [
                     DropdownMenuItem(
                       value: "1",
@@ -230,7 +228,7 @@ class _SimFormPageState extends State<SimFormPage> {
             children: [
               Container(
                 alignment: Alignment.centerLeft,
-                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                margin: EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
                   child: Text("Ajukan"),

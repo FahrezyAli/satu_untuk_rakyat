@@ -33,7 +33,7 @@ class StatusViewport extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+              padding: EdgeInsets.all(5),
               margin: EdgeInsets.symmetric(vertical: 5),
               child: Row(
                 children: [
