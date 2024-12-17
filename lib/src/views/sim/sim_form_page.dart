@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:satu_untuk_rakyat/src/components/dropdown_field.dart';
 import 'package:satu_untuk_rakyat/src/components/scaffold.dart';
 import 'package:satu_untuk_rakyat/src/components/text_field.dart';
+import 'package:satu_untuk_rakyat/src/components/upload_button.dart';
 import 'package:satu_untuk_rakyat/src/utils/colors.dart';
 
 class SimFormPage extends StatefulWidget {
@@ -14,6 +15,8 @@ class SimFormPage extends StatefulWidget {
 
 class _SimFormPageState extends State<SimFormPage> {
   bool useKTP = true;
+  bool sim = false;
+  bool useHealthTest = true;
   bool useReminder = false;
 
   TextEditingController nikController = TextEditingController();
@@ -66,7 +69,7 @@ class _SimFormPageState extends State<SimFormPage> {
       useDrawer: false,
       useNavigationBar: false,
       title: "SIM",
-      body: Column(
+      body: ListView(
         children: [
           Container(
             margin: EdgeInsets.all(20),
@@ -223,14 +226,110 @@ class _SimFormPageState extends State<SimFormPage> {
               ],
             ),
           ),
-          SizedBox(height: 75),
+          Container(
+            padding: EdgeInsets.only(left: 20),
+            alignment: Alignment.topLeft,
+            child: Text(
+              "Foto Scan KTP",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+            child: UploadButton(
+              text: useKTP ? "KTP Terunggah!" : "Unggah KTP",
+              enabled: !useKTP,
+              onPressed: () {
+                Navigator.pushNamed(context, '/camera');
+              },
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.only(left: 20),
+            alignment: Alignment.topLeft,
+            child: Text(
+              "Foto Scan SIM Lama",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+            child: UploadButton(
+              text: sim ? "SIM Terunggah!" : "Unggah SIM Lama",
+              enabled: !sim,
+              onPressed: () {
+                setState(() {
+                  sim = true;
+                });
+                Navigator.pushNamed(context, '/camera');
+              },
+            ),
+          ),
+          SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.only(left: 20),
+            alignment: Alignment.topLeft,
+            child: Text(
+              "Pdf Surat Hasil Test Kesehatan & Psikologi",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              Container(
+                width: 24,
+                height: 24,
+                margin: EdgeInsets.fromLTRB(20, 5, 5, 5),
+                child: Checkbox(
+                  value: useHealthTest,
+                  onChanged: (value) {
+                    setState(() {
+                      useHealthTest = value!;
+                    });
+                  },
+                ),
+              ),
+              Text(
+                "Ambil dari Aplikasi",
+                style: TextStyle(
+                  fontFamily: "Rubik",
+                  fontSize: 14,
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(20, 5, 20, 0),
+            child: UploadButton(
+              text: useHealthTest ? "Surat Terunggah!" : "Upload Surat",
+              enabled: !useHealthTest,
+              onPressed: () {
+                Navigator.pushNamed(context, '/camera');
+              },
+            ),
+          ),
           Row(
             children: [
               Container(
                 alignment: Alignment.centerLeft,
                 margin: EdgeInsets.all(20),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/status');
+                  },
                   child: Text("Ajukan"),
                 ),
               ),
@@ -248,7 +347,7 @@ class _SimFormPageState extends State<SimFormPage> {
                 ),
               ),
               Text(
-                "Tambahkan ke Reminder",
+                "Tambahkan ke Pengingat",
                 style: TextStyle(
                   fontFamily: "Rubik",
                   fontSize: 14,

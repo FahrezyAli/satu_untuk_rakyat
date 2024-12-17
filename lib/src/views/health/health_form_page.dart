@@ -245,7 +245,7 @@ class _HealthFormPageState extends State<HealthFormPage> {
             padding: EdgeInsets.only(left: 20),
             alignment: Alignment.topLeft,
             child: Text(
-              "Unggah KTP",
+              "Foto Scan KTP",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 14,
@@ -289,7 +289,7 @@ class _HealthFormPageState extends State<HealthFormPage> {
                 ),
               ),
               Text(
-                "Tambahkan ke Reminder",
+                "Tambahkan ke Pengingat",
                 style: TextStyle(
                   fontFamily: "Rubik",
                   fontSize: 14,
